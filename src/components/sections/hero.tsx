@@ -1,17 +1,25 @@
-import { useContext, useState } from 'react'
 import LogoLight from '../../assets/media/dEx-Logofiles-black.png'
 import LogoDark from '../../assets/media/dEx-Logofiles-color.png'
 import {BsSunFill, BsMoonFill} from 'react-icons/bs'
-import { ThemeContext } from '../../App'
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
+import { themeAction } from '../../store/actions/themeAction'
+import { darkTheme, lightTheme } from '../../store/types/themeType'
+import { menuAction } from '../../store/actions/menuAction'
+import { toggleMenu } from '../../store/types/menuType'
 
 const Hero = () => {
 
-  const {theme, setTheme} = useContext(ThemeContext)
-  const [menuState, setMenuState] = useState(false)
+  const menuState = useAppSelector(state => state.MenuReducer.menuState)
+  const dispatchMenuAction = useAppDispatch()
+
+  const theme = useAppSelector(state => state.ThemeReducer.currentTheme)
+  const dispatchThemeAction = useAppDispatch()
+
   const setCurrentTheme = (theme: 'light' | 'dark') => {
-    setTheme(theme)
+    dispatchThemeAction(themeAction(theme))
     localStorage.setItem('theme', theme)
   }
+
   return (
     <section 
       aria-label='hero__section'
@@ -48,12 +56,12 @@ const Hero = () => {
         >
           <BsMoonFill
            fontSize={24}
-           onClick={() => setCurrentTheme('dark')}
+           onClick={() => setCurrentTheme(darkTheme)}
            className={`${theme === 'light' ? 'text-white' : 'text-black'} p-1 grow basis-full`}
            />
           <BsSunFill
            fontSize={24}
-           onClick={() => setCurrentTheme('light')}
+           onClick={() => setCurrentTheme(lightTheme)}
            className={`${theme === 'light' ? 'text-white' : 'text-black'} p-1 grow basis-full`}
            />
            <div
@@ -61,12 +69,12 @@ const Hero = () => {
            ></div>
         </button>
         <div
-        onClick={() => setMenuState(!menuState)}
+        onClick={() => dispatchMenuAction(menuAction(toggleMenu))}
           className={`${menuState ? 'h-max' : 'h-6'} flex flex-col justify-between cursor-pointer md:hidden`}
         >
-          <span className={`${theme === 'light' ? 'bg-black' : 'bg-white'} ${menuState ? 'rotate-45 w-10 bg-green-light' : '' } z-10 transition-all block w-10 h-1 `}></span>
-          <span className={`${theme === 'light' ? 'bg-black' : 'bg-white'} ${menuState ? 'hidden' : '' } z-10 transition-all block w-10 h-1 `}></span>
-          <span className={`${theme === 'light' ? 'bg-black' : 'bg-white'} ${menuState ? '-rotate-45 w-10 bg-green-light' : '' } z-10 transition-all block w-10 h-1 `}></span>
+          <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-green-light') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
+          <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-green-light') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'hidden' : '' } z-10 transition-all block w-10 h-1 `}></span>
+          <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-green-light') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? '-rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
         </div>
       </header>
 
