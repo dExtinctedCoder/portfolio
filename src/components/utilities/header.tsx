@@ -61,16 +61,16 @@ const Header = () => {
           className={`${theme === 'light' ? 'text-white' : 'text-black'} p-1 grow basis-full`}
           />
           <div
-          className={`${theme === 'light' ? 'right-0' : 'left-0'} shadow-black transition-all absolute isolate rounded-full w-[26px] aspect-square bg-green-light`}
+          className={`${theme === 'light' ? 'right-0 bg-purple' : 'left-0 bg-green-light'} shadow-black transition-all absolute isolate rounded-full w-[26px] aspect-square`}
           ></div>
       </button>
       <div
       onClick={() => dispatchMenuAction(menuAction(toggleMenu))}
         className={`${menuState ? 'h-max' : 'h-6'} flex flex-col justify-between cursor-pointer md:hidden`}
       >
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-green-light') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-green-light') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'hidden' : '' } z-10 transition-all block w-10 h-1 `}></span>
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-green-light') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? '-rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'hidden' : '' } z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? '-rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
       </div>
     </header>
   )
