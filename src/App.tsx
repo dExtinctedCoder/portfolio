@@ -12,7 +12,7 @@ function App() {
   
 
   return (
-    <div className={`bg-white text-black min-h-screen dark:bg-black dark:text-white`}>
+    <div className={`bg-green-light text-black min-h-screen dark:bg-black dark:text-white`}>
       <HomePage />
     </div>
   )
