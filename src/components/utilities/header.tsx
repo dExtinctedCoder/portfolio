@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header
-      className='flex items-center justify-between p-5 md:py-6 px-10'
+      className={`z-20 flex items-center justify-between shadow-md sticky top-0 p-5 ${theme === 'light' ? 'bg-green-light' : 'bg-black shadow-[#2a2929]'} md:static md:shadow-none md:py-6 px-10`}
     >
       <img 
         src={theme === 'dark' ? LogoDark : LogoLight} alt="#logo"
@@ -34,17 +34,17 @@ const Header = () => {
       >
         <Link to="#about__section"
           aria-label='button'
-          className='block'
+          className={`block text-lg font-medium hover:text-pink`}
         >
           About</Link>
         <Link to="#profile__section"
           aria-label='button'
-          className='block'
+          className={`block text-lg font-medium hover:text-pink`}
         >
           Profile</Link>
         <Link to="#contact__section"
           aria-label='button'
-          className='block'
+          className={`block text-lg font-medium hover:text-pink`}
         >
           Contact</Link>
       </nav>
