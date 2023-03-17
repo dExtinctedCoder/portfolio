@@ -10,10 +10,10 @@ const Hero = () => {
   return (
     <section 
       aria-label='hero__section'
-      className=" shadow-xl relative"
+      className=" shadow-xl relative min-h-screen flex flex-col"
     >
       <Header />
-      <div className="py-24 pb-40 px-8 relative overflow-x-hidden md:px-16 lg:px-24 lg:pb-48">
+      <div className="py-24 pb-40 px-8 relative overflow-x-hidden grow basis-full md:px-16 md:flex md:items-center lg:px-24 lg:pb-48">
         <div className="flex items-center">
           <div className="z-[1]">
             <p className="text-2xl font-semibold lg:text-3xl">Jamiu Salaudeen</p>
@@ -37,7 +37,7 @@ const Hero = () => {
             <span className={`w-8 aspect-square ${theme === 'light' ? 'border-purple' : 'border-pink'} animate-spinner border-[6px] opacity-20 self-start`}></span>
           </div>
         </div>
-        <div className="absolute right-0 mr-8 bottom-0 mb-10 flex flex-col items-center md:right-[15%]">
+        <div className="absolute right-0 mr-8 bottom-0 mb-10 flex flex-col items-center md:right-[15%] md:bottom-[10%]">
           <span className={`w-[3px] h-24 bg-black block mb-2 dark:bg-white md:mb-3 md:h-36`}></span>
           <a href="https://twitter.com/dextinctedcoder" target='_blank'><BsTwitter fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-3 cursor-pointer md:mb-6`} /></a>
           <a href="https://github.com/dExtinctedCoder" target='_blank'><BsGithub fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-3 cursor-pointer md:mb-6`} /></a>
