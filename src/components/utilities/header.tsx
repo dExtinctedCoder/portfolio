@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header
-      className={`z-20 flex items-center justify-between shadow-md sticky top-0 p-5 ${theme === 'light' ? 'bg-green-light' : 'bg-black shadow-[#2a2929]'} md:static md:shadow-none md:py-6 px-10`}
+      className={`z-20 flex items-center justify-between shadow-md sticky top-0 p-5 bg-green-light dark:bg-black dark:shadow-[#2a2929] md:static md:shadow-none md:py-6 px-10`}
     >
       <img 
         src={theme === 'dark' ? LogoDark : LogoLight} alt="#logo"
