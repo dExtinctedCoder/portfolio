@@ -1,5 +1,6 @@
 import LogoLight from '../../assets/media/dEx-Logofiles-black.png'
 import LogoDark from '../../assets/media/dEx-Logofiles-color.png'
+import { HashLink as Link } from 'react-router-hash-link'
 import {BsSunFill, BsMoonFill} from 'react-icons/bs'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import { themeAction } from '../../store/actions/themeAction'
@@ -31,21 +32,21 @@ const Header = () => {
       <nav
         className='items-center gap-x-12 hidden text-base md:text-lg md:flex'
       >
-        <a href="#about__section"
+        <Link to="#about__section"
           aria-label='button'
           className='block'
         >
-          About</a>
-        <a href="#profile__section"
+          About</Link>
+        <Link to="#profile__section"
           aria-label='button'
           className='block'
         >
-          Profile</a>
-        <a href="#contact__section"
+          Profile</Link>
+        <Link to="#contact__section"
           aria-label='button'
           className='block'
         >
-          Contact</a>
+          Contact</Link>
       </nav>
       <button
         className={`${theme === 'light' ? 'bg-black' : 'bg-white'} relative rounded-xl flex items-center w-14`}
