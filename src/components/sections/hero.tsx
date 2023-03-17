@@ -10,9 +10,8 @@ const Hero = () => {
   return (
     <section 
       aria-label='hero__section'
-      className=" shadow-xl relative min-h-screen flex flex-col"
+      className=" shadow-xl min-h-screen flex flex-col"
     >
-      <Header />
       <div className="py-24 pb-40 px-8 relative overflow-x-hidden grow basis-full md:px-16 md:flex md:items-center lg:px-24 lg:pb-48">
         <div className="flex items-center">
           <div className="z-[1]">
