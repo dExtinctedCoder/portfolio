@@ -4,6 +4,7 @@ import Portfolio from "../components/sections/portfolio"
 import Header from "../components/utilities/header"
 import Experience from "../components/sections/experience"
 import Testimonial from "../components/sections/testimonial"
+import Contact from "../components/sections/contact"
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Portfolio />
       <Experience />
       <Testimonial />
+      <Contact />
     </div>
   )
 }
