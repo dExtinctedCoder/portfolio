@@ -1,4 +1,4 @@
-import {PortfolioCard} from "../utilities/card"
+import { PortfolioCard } from "../utilities/card"
 import Netflix from '../../assets/media/NetflixD.png'
 import Pricify from '../../assets/media/pricifyD~2.png'
 import TicTac from '../../assets/media/TicTacD.jpg'
@@ -41,11 +41,11 @@ const Portfolio = () => {
   ]
 
   return (
-    <section className="px-10 pb-32 md:px-28">
+    <section id="portfolio__section" className="px-10 pb-32 md:px-28">
       <h2 className="text-center text-4xl mb-8 font-bold tracking-wider">Portfolio</h2>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         {
-          projects.map(({title, detail, href, bg}) => {
+          projects.map(({ title, detail, href, bg }) => {
             return <PortfolioCard title={title} detail={detail} href={href} bg={bg} />
           })
         }
