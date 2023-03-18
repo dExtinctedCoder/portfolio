@@ -5,6 +5,7 @@ import Header from "../components/utilities/header"
 import Experience from "../components/sections/experience"
 import Testimonial from "../components/sections/testimonial"
 import Contact from "../components/sections/contact"
+import Footer from "../components/sections/footer"
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Experience />
       <Testimonial />
       <Contact />
+      <Footer />
     </div>
   )
 }
