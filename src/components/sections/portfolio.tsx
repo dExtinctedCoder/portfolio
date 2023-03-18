@@ -46,7 +46,7 @@ const Portfolio = () => {
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         {
           projects.map(({ title, detail, href, bg }) => {
-            return <PortfolioCard title={title} detail={detail} href={href} bg={bg} />
+            return <PortfolioCard key={title} title={title} detail={detail} href={href} bg={bg} />
           })
         }
       </div>

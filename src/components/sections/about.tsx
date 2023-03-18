@@ -1,5 +1,5 @@
 import Card from "../utilities/card"
-import {SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiRedux, SiBootstrap, SiReact, SiSass, SiJest, SiTypescript} from 'react-icons/si'
+import { SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiRedux, SiBootstrap, SiReact, SiSass, SiJest, SiTypescript } from 'react-icons/si'
 
 const About = () => {
   return (
@@ -10,14 +10,14 @@ const About = () => {
         <h2
           className="text-4xl mb-8 font-bold tracking-wider"
         >About</h2>
-        <p className="flex items-start md:text-xl">
+        <div className="flex items-start md:text-xl">
           <span className="w-2 h-20 mr-2 bg-purple dark:bg-green-light md:w-16 md:h-[3px] md:mt-1"></span>
-          <p className=" max-w-[90ch]">
+          <div className=" max-w-[90ch]">
             <p className="mb-4 leading-6"><span className="text-purple font-medium dark:text-green-light">Solution-driven </span>Front End developer adept at contributing to highly collaborative work environment.</p>
             <p className="mb-4 leading-6">Built products for desktop and mobile app users over <span className="text-purple font-medium dark:text-green-light">2+ years</span>, meeting highest standards for web design, <span className="text-purple font-medium dark:text-green-light">user experience</span>, <span className="text-purple font-medium dark:text-green-light">best practices</span> and <span className="text-purple font-medium dark:text-green-light">speed</span>.</p>
             <p className="leading-6">Designed and developed web applications across multiple <span className="text-purple font-medium dark:text-green-light">API's</span>, third party integrations and databases.</p>
-          </p>
-        </p>
+          </div>
+        </div>
       </div>
       <div>
         <h2 className="text-center text-4xl mb-8 font-bold tracking-wider">My Skills</h2>
