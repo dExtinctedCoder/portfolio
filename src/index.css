@@ -16,4 +16,19 @@
     -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
     clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
   }
+  .delay-0 {
+    animation-delay: 0s;
+  }
+  .delay-10 {
+    animation-delay: 350ms;
+  }
+  .delay-20 {
+    animation-delay: 500ms;
+  }
+  .delay-30 {
+    animation-delay: 700ms;
+  }
+  .delay-40 {
+    animation-delay: 1000ms;
+  }
 }
