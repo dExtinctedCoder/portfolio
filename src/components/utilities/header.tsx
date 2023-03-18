@@ -1,7 +1,7 @@
 import LogoLight from '../../assets/media/dEx-Logofiles-black.png'
 import LogoDark from '../../assets/media/dEx-Logofiles-color.png'
 import { HashLink as Link } from 'react-router-hash-link'
-import {BsSunFill, BsMoonFill} from 'react-icons/bs'
+import { BsSunFill, BsMoonFill } from 'react-icons/bs'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import { themeAction } from '../../store/actions/themeAction'
 import { darkTheme, lightTheme } from '../../store/types/themeType'
@@ -25,7 +25,7 @@ const Header = () => {
     <header
       className={`z-20 flex items-center justify-between shadow-md sticky top-0 p-5 bg-green-light dark:bg-black dark:shadow-[#2a2929] md:static md:shadow-none md:py-6 px-10`}
     >
-      <img 
+      <img
         src={theme === 'dark' ? LogoDark : LogoLight} alt="#logo"
         className='w-24'
       />
@@ -37,11 +37,11 @@ const Header = () => {
           className={`block text-lg font-medium hover:text-pink`}
         >
           About</Link>
-        <Link to="#profile__section"
+        <Link to="#portfolio__section"
           aria-label='button'
           className={`block text-lg font-medium hover:text-pink`}
         >
-          Profile</Link>
+          Portfolio</Link>
         <Link to="#contact__section"
           aria-label='button'
           className={`block text-lg font-medium hover:text-pink`}
@@ -55,23 +55,23 @@ const Header = () => {
           fontSize={24}
           onClick={() => setCurrentTheme(darkTheme)}
           className={`${theme === 'light' ? 'text-white' : 'text-black'} p-1 grow basis-full`}
-          />
+        />
         <BsSunFill
           fontSize={24}
           onClick={() => setCurrentTheme(lightTheme)}
           className={`${theme === 'light' ? 'text-white' : 'text-black'} p-1 grow basis-full`}
-          />
-          <div
+        />
+        <div
           className={`${theme === 'light' ? 'right-0 bg-purple' : 'left-0 bg-green-light'} shadow-black transition-all absolute isolate rounded-full w-[26px] aspect-square`}
-          ></div>
+        ></div>
       </button>
       <div
-      onClick={() => dispatchMenuAction(menuAction(toggleMenu))}
+        onClick={() => dispatchMenuAction(menuAction(toggleMenu))}
         className={`${menuState ? 'h-max' : 'h-6'} flex flex-col justify-between cursor-pointer md:hidden`}
       >
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'hidden' : '' } z-10 transition-all block w-10 h-1 `}></span>
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? '-rotate-45 w-10' : '' } z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'rotate-45 w-10' : ''} z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'hidden' : ''} z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? '-rotate-45 w-10' : ''} z-10 transition-all block w-10 h-1 `}></span>
       </div>
     </header>
   )
