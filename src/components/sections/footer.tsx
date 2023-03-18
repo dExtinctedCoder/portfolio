@@ -35,7 +35,7 @@ const Footer = () => {
         className='flex items-center justify-center pt-6 pb-5'
       >
         <a
-          href={Resume} download
+          href={Resume} download="Jamiu-Salaudeen--Resume"
           className='py-3 px-4 font-semibold bg-black text-gold-light rounded-lg dark:text-black dark:bg-gold-light'
         >
           Download Resume
