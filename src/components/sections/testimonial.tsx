@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Testimonial = () => {
@@ -10,7 +10,7 @@ const Testimonial = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 6000,
     pauseOnHover: true
   };
 
