@@ -7,6 +7,7 @@ import { themeAction } from '../../store/actions/themeAction'
 import { darkTheme, lightTheme } from '../../store/types/themeType'
 import { menuAction } from '../../store/actions/menuAction'
 import { toggleMenu } from '../../store/types/menuType'
+import Menu from './menu'
 
 const Header = () => {
 
@@ -23,7 +24,7 @@ const Header = () => {
 
   return (
     <header
-      className={`z-20 flex items-center justify-between shadow-md sticky top-0 p-5 bg-green-light dark:bg-black dark:shadow-[#2a2929] md:static md:shadow-none md:py-6 px-10`}
+      className={`z-20 flex items-center justify-between sticky top-0 p-5 bg-green-light dark:bg-black md:static md:shadow-none md:py-6 px-10`}
     >
       <img
         src={theme === 'dark' ? LogoDark : LogoLight} alt="#logo"
@@ -67,12 +68,13 @@ const Header = () => {
       </button>
       <div
         onClick={() => dispatchMenuAction(menuAction(toggleMenu))}
-        className={`${menuState ? 'h-max' : 'h-6'} flex flex-col justify-between cursor-pointer md:hidden`}
+        className={`${menuState ? 'h-max' : 'h-6'} z-30 flex flex-col justify-between cursor-pointer md:hidden`}
       >
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'rotate-45 w-10' : ''} z-10 transition-all block w-10 h-1 `}></span>
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? 'hidden' : ''} z-10 transition-all block w-10 h-1 `}></span>
-        <span className={`${theme === 'light' ? (!menuState ? 'bg-black' : 'bg-purple') : (menuState ? 'bg-green-light' : 'bg-white')} ${menuState ? '-rotate-45 w-10' : ''} z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`bg-black dark:bg-white ${menuState ? 'rotate-45 w-10' : ''} z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`bg-black dark:bg-white ${menuState ? 'hidden' : ''} z-10 transition-all block w-10 h-1 `}></span>
+        <span className={`bg-black dark:bg-white ${menuState ? '-rotate-45 w-10' : ''} z-10 transition-all block w-10 h-1 `}></span>
       </div>
+      <Menu />
     </header>
   )
 }
