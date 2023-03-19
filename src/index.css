@@ -6,6 +6,7 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
+    overflow-x: hidden;
   }
   body::-webkit-scrollbar {
     display: none;
