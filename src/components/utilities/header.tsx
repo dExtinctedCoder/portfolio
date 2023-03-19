@@ -8,6 +8,7 @@ import { darkTheme, lightTheme } from '../../store/types/themeType'
 import { menuAction } from '../../store/actions/menuAction'
 import { toggleMenu } from '../../store/types/menuType'
 import Menu from './menu'
+import { useState } from 'react'
 
 const Header = () => {
 
@@ -17,9 +18,20 @@ const Header = () => {
   const theme = useAppSelector(state => state.ThemeReducer.currentTheme)
   const dispatchThemeAction = useAppDispatch()
 
+  // const [themeState, setThemeState] = useState(theme)
+
   const setCurrentTheme = (theme: 'light' | 'dark') => {
     dispatchThemeAction(themeAction(theme))
     localStorage.setItem('theme', theme)
+  }
+
+  const callDispatch = () => {
+    if (theme === 'light') {
+      dispatchThemeAction(themeAction(darkTheme))
+    }
+    if (theme === 'dark') {
+      dispatchThemeAction(themeAction(lightTheme))
+    }
   }
 
   return (
@@ -63,6 +75,7 @@ const Header = () => {
           className={`${theme === 'light' ? 'text-white' : 'text-black'} p-1 grow basis-full`}
         />
         <div
+          onClick={() => callDispatch()}
           className={`${theme === 'light' ? 'right-0 bg-purple' : 'left-0 bg-green-light'} shadow-black transition-all absolute isolate rounded-full w-[26px] aspect-square`}
         ></div>
       </button>
