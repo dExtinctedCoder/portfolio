@@ -1,7 +1,7 @@
 const Experience = () => {
   return (
-    <section className=" px-10 pb-32 relative bg-[#acd907] dark:bg-[#292929] md:px-28">
-      <h2 className="text-4xl mb-8 font-bold tracking-wider absolute top-0 -translate-y-[60%]">Experience</h2>
+    <section className=" px-10 pb-32 relative bg-[#69AB88] text-white dark:bg-[#292929] md:px-28">
+      <h2 className="text-4xl mb-8 text-black dark:text-white font-bold tracking-wider absolute top-0 -translate-y-[60%]">Experience</h2>
       <div className="pt-24 flex">
         <div className="clip-tag shadow-2xl font-light bg-green-light text-black mr-2 py-[2px] pl-3 pr-5 self-start dark:bg-black dark:text-white">2022</div>
         <div className="mr-2 flex items-center flex-col grow gap-y-2 h-auto min-h-full">

@@ -5,10 +5,10 @@ module.exports = {
     colors: {
       'black': '#1B1B1B',
       'white': '#FFFFFF',
-      'green-light': '#C8FF00',
+      'green-light': '#8AE1B3',
       'gold-light': '#E89300',
       'pink': '#FF0048',
-      'purple': '#B611EE'
+      'purple': '#EF4D96'
     },
     fontFamily: {
       pry: [],
