@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
   }
   body::-webkit-scrollbar {
     display: none;
@@ -15,6 +16,10 @@
   .clip-tag {
     -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
     clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 0 0);
+  }
+  .clip-circle {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
   }
   .delay-0 {
     animation-delay: 0s;
