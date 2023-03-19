@@ -8,7 +8,6 @@ import { darkTheme, lightTheme } from '../../store/types/themeType'
 import { menuAction } from '../../store/actions/menuAction'
 import { toggleMenu } from '../../store/types/menuType'
 import Menu from './menu'
-import { useState } from 'react'
 
 const Header = () => {
 
@@ -17,8 +16,6 @@ const Header = () => {
 
   const theme = useAppSelector(state => state.ThemeReducer.currentTheme)
   const dispatchThemeAction = useAppDispatch()
-
-  // const [themeState, setThemeState] = useState(theme)
 
   const setCurrentTheme = (theme: 'light' | 'dark') => {
     dispatchThemeAction(themeAction(theme))
