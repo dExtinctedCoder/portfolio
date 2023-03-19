@@ -19,7 +19,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div>
+      <section id="skill__section">
         <h2 className="text-center text-4xl mb-8 font-bold tracking-wider">My Skills</h2>
         <div
           className="flex flex-wrap gap-8 justify-center items-center"
@@ -34,7 +34,7 @@ const About = () => {
           <Card Icon={SiSass} Title='Sass' />
           <Card Icon={SiTypescript} Title='Typescript' />
         </div>
-      </div>
+      </section>
     </section>
   )
 }
