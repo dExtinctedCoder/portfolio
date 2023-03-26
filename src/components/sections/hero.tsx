@@ -1,14 +1,14 @@
 import { HashLink as Link } from "react-router-hash-link"
 import { useAppSelector } from "../../store/hooks"
 import Header from "../utilities/header"
-import {BsLinkedin, BsTwitter, BsGithub, BsWhatsapp} from 'react-icons/bs'
+import { BsLinkedin, BsTwitter, BsGithub, BsWhatsapp } from 'react-icons/bs'
 
 const Hero = () => {
 
   const theme = useAppSelector(state => state.ThemeReducer.currentTheme)
 
   return (
-    <section 
+    <section
       aria-label='hero__section'
       className=" shadow-xl flex flex-col "
     >
@@ -38,9 +38,9 @@ const Hero = () => {
         </div>
         <div className="absolute right-0 mr-8 bottom-0 mb-10 flex flex-col items-center md:right-[15%] md:bottom-[10%]">
           <span className={`w-[3px] h-24 bg-black block mb-2 dark:bg-white md:mb-3 md:h-36`}></span>
-          <a href="https://twitter.com/dextinctedcoder" target='_blank'><BsTwitter fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-3 cursor-pointer md:mb-6`} /></a>
-          <a href="https://github.com/dExtinctedCoder" target='_blank'><BsGithub fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-3 cursor-pointer md:mb-6`} /></a>
-          <a href="https://www.linkedin.com/in/dextinctedcoder/" target='_blank'><BsLinkedin fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-3 cursor-pointer md:mb-6`} /></a>
+          <a href="https://twitter.com/dextinctedcoder" target='_blank'><BsTwitter fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-5 cursor-pointer md:mb-6`} /></a>
+          <a href="https://github.com/dExtinctedCoder" target='_blank'><BsGithub fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-5 cursor-pointer md:mb-6`} /></a>
+          <a href="https://www.linkedin.com/in/dextinctedcoder/" target='_blank'><BsLinkedin fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light mb-5 cursor-pointer md:mb-6`} /></a>
           <a href="https://wa.me/2347084195933?text=Hi,Jamiu.%I%will%like%to%discuss%a%job%offer%with%you" target='_blank'><BsWhatsapp fontSize={24} className={`text-black hover:text-purple dark:text-white dark:hover:text-green-light cursor-pointer`} /></a>
         </div>
       </div>
