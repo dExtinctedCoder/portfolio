@@ -1,5 +1,5 @@
 import { BsTwitter, BsLinkedin, BsGithub, BsWhatsapp } from 'react-icons/bs'
-import Resume from '../../assets/Jamiu_Salaudeen-Resume.pdf'
+import Resume from '../../assets/Jamiu_Salaudeen_Resume.pdf'
 
 const Footer = () => {
 
@@ -35,7 +35,7 @@ const Footer = () => {
         className='flex items-center justify-center pt-6 pb-5'
       >
         <a
-          href={Resume} download="Jamiu-Salaudeen--Resume"
+          href={Resume} download="Jamiu_Salaudeen_Resume"
           className='py-3 px-4 font-semibold bg-purple text-green-light rounded-lg dark:text-black dark:bg-gold-light'
         >
           Download Resume
