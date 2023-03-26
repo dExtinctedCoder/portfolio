@@ -34,7 +34,7 @@ export const PortfolioCard = ({ title, detail, href, bg }: portfolioPropsType) =
 
       </div>
       <div className="w-full h-full flex flex-col justify-center items-center p-8 px-10 z-10 text-white bg-[#69AB88] hover:bg-[rgba(22,22,22,0.55)] dark:bg-[#171616] dark:hover:bg-[rgba(22,22,22,0.55)]">
-        <h5 className="text-2xl font-bold text-[#191919] mb-2">{title}</h5>
+        <h5 className="text-2xl font-bold text-[#191919] dark:text-white mb-2">{title}</h5>
         <p className="mb-5 text-xl font-semibold">{detail}</p>
         <Link
           to={href}
